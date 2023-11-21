@@ -1,0 +1,4 @@
+repository "Stage 3@MegaBomb@cloud"
+  path "/"
+    br "/main"
+    co "/main"
