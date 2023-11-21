@@ -22,6 +22,7 @@ public class GhostSpawnManager : MonoBehaviour
     public int spawnLimit;
     int spawnAmount;
     bool firstSpawn;
+    bool deleted;
     public float spawnTime;
     float time_remaining;
     float runningTime;
@@ -31,6 +32,7 @@ public class GhostSpawnManager : MonoBehaviour
     {
         spawnAmount = 0;
         firstSpawn = false;
+        deleted = false;
 
         time_remaining = spawnTime;
         runningTime = 0;
@@ -70,17 +72,25 @@ public class GhostSpawnManager : MonoBehaviour
             }
             else
             {
-                Destroy(spawnedObjects[spawnAmount]);
-                spawnedObjects.RemoveAt(spawnAmount);
+                if(!deleted)
+                {
+                    Destroy(spawnedObjects[spawnAmount]);
+                    spawnedObjects.RemoveAt(spawnAmount);
+
+                    deleted = true;
+                }
 
                 spawnPosition = new Vector3(Random.Range(cameraPosition.x - restrictionX, cameraPosition.x + restrictionX), Random.Range(cameraPosition.y, cameraPosition.y + restrictionY), Random.Range(cameraPosition.z - restrictionZ, cameraPosition.z + restrictionZ));
                 spawnedObjects.Insert(spawnAmount, Instantiate(spawnablePrefab, spawnPosition, Quaternion.identity));
                 if (Physics.CheckSphere(cameraPosition, detectionSphereRadius))
                 {
+                    Destroy(spawnedObjects[spawnAmount]);
+                    spawnedObjects.RemoveAt(spawnAmount);
                     goto continueProcess;
                 }
             }
 
+            deleted = false;
             spawnAmount++;
             time_remaining = spawnTime;
        }
