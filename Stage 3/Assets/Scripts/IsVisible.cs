@@ -6,8 +6,8 @@ public class IsVisible : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    GameObject SpawnManager;
-    private CreateMap mapCode;
+    //GameObject SpawnManager;
+    //private CreateMap mapCode;
 
     Renderer m_Renderer;
 
@@ -15,7 +15,7 @@ public class IsVisible : MonoBehaviour
     public float timeScared;
     void Start()
     {
-        mapCode = SpawnManager.GetComponent<CreateMap>();
+        //mapCode = SpawnManager.GetComponent<CreateMap>();
         m_Renderer = GetComponent<Renderer>();
 
         timeVisible = 0;
