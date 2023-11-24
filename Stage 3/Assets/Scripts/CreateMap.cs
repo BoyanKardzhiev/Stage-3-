@@ -17,20 +17,28 @@ public class CreateMap : MonoBehaviour
     [SerializeField]
     List<GameObject> FoundObjects = new List<GameObject>();
 
+    [SerializeField]
+    GameObject building;
 
     Camera arCam;
     GameObject spawnedObject;
     GameObject spawnablePrefab;
 
     public int objectNumber;
-    int foundNumber;
+    int amountFound;
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < 10; i++)
+        {
+            building.transform.GetChild(i).gameObject.SetActive(false);
+        }
+
         spawnedObject = null;
         arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
 
         objectNumber = 0;
+        amountFound = 0;
     }
 
     // Update is called once per frame
@@ -57,7 +65,9 @@ public class CreateMap : MonoBehaviour
                     else if (hit.collider.gameObject.tag == "Collectable")
                     {
                         //foundNumber = hit.collider.gameObject.GetComponent<FoundObject>().obj.CollectableNumber;
-                        FoundObjects[foundNumber].SetActive(true);
+                        //FoundObjects[foundNumber].SetActive(true);
+
+                        amountFound++;
                         Destroy(hit.collider.gameObject);
                     }
                     else
@@ -75,6 +85,11 @@ public class CreateMap : MonoBehaviour
                 spawnedObject = null;
             }
         }
+
+        for(int i=0; i<amountFound; i++)
+        {
+            building.transform.GetChild(i).gameObject.SetActive(true);
+        }
     }
 
     private void SpawnPrefab(Vector3 spawnPosition, Quaternion rotation)
@@ -85,6 +100,16 @@ public class CreateMap : MonoBehaviour
     public void ChangeObjectNumber(int change)
     {
         objectNumber = change;
+    }
+
+    public void ChangeFoundAmount(int change)
+    {
+        for (int i = 0; i < amountFound; i++)
+        {
+            building.transform.GetChild(i).gameObject.SetActive(false);
+        }
+
+        amountFound = amountFound + change;
     }
 }
 

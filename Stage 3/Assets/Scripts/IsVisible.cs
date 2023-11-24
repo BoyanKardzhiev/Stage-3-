@@ -5,10 +5,20 @@ using UnityEngine;
 public class IsVisible : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField]
+    GameObject SpawnManager;
+    private CreateMap mapCode;
+
     Renderer m_Renderer;
+
+    float timeVisible;
+    public float timeScared;
     void Start()
     {
+        mapCode = SpawnManager.GetComponent<CreateMap>();
         m_Renderer = GetComponent<Renderer>();
+
+        timeVisible = 0;
     }
 
     // Update is called once per frame
@@ -16,11 +26,18 @@ public class IsVisible : MonoBehaviour
     {
         if (m_Renderer.isVisible)
         {
-            Debug.Log("Object is visible!");
+            timeVisible = timeVisible + Time.deltaTime;
+            Debug.Log(timeVisible);
         }
         else
         {
+            timeVisible = 0;
             Debug.Log("Object is not visible!");
+        }
+
+        if (timeVisible >= timeScared)
+        {
+            //mapCode.ChangeFoundAmount(-1);
         }
     }
 }

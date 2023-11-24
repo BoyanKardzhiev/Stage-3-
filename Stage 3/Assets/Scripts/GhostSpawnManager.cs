@@ -6,10 +6,6 @@ using UnityEngine.XR.ARFoundation;
 public class GhostSpawnManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]
-    ARRaycastManager m_RaycastManager;
-    List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
-
     [SerializeField] 
     GameObject spawnablePrefab;
     public List<GameObject> spawnedObjects = new List<GameObject>();
