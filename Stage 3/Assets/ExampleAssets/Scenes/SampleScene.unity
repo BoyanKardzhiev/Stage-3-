@@ -1230,10 +1230,10 @@ MonoBehaviour:
     type: 3}
   spawnedObjects: []
   restrictionX: 3
-  restrictionY: 1.25
+  restrictionY: -0.4
   restrictionZ: 3.5
   detectionSphereRadius: 0.5
-  spawnLimit: 10
+  spawnLimit: 8
   spawnTime: 2
 --- !u!4 &1038671549
 Transform:
