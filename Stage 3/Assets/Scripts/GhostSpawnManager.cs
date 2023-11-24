@@ -33,13 +33,15 @@ public class GhostSpawnManager : MonoBehaviour
         time_remaining = spawnTime;
         runningTime = 0;
 
-        cameraPosition = Camera.main.transform.position;
+        cameraPosition = transform.position;
+        //cameraPosition = Camera.main.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-       cameraPosition = Camera.main.transform.position;
+       //cameraPosition = Camera.main.transform.position;
+       cameraPosition = transform.position;
        runningTime = runningTime + Time.deltaTime;
 
         CheckVisibleGhost();

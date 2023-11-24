@@ -676,6 +676,7 @@ GameObject:
   - component: {fileID: 388525034}
   - component: {fileID: 388525033}
   - component: {fileID: 388525035}
+  - component: {fileID: 388525036}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -770,6 +771,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AnchorPrefab: {fileID: 0}
+--- !u!114 &388525036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388525029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HumanSegmentationStencilMode: 0
+  m_HumanSegmentationDepthMode: 0
+  m_EnvironmentDepthMode: 1
+  m_EnvironmentDepthTemporalSmoothing: 1
+  m_OcclusionPreferenceMode: 0
 --- !u!1 &399020753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,7 +1188,7 @@ MonoBehaviour:
     type: 3}
   spawnedObjects: []
   restrictionX: 3
-  restrictionY: 2
+  restrictionY: 1.25
   restrictionZ: 3.5
   detectionSphereRadius: 0.5
   spawnLimit: 10
@@ -1832,6 +1850,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden Building
       objectReference: {fileID: 0}
+    - target: {fileID: 2499611011961408069, guid: 65d7dede562c8d8418e7c7416d850050,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8047502702995394397, guid: 65d7dede562c8d8418e7c7416d850050,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1860,7 +1883,7 @@ PrefabInstance:
     - target: {fileID: 8047502702995394397, guid: 65d7dede562c8d8418e7c7416d850050,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.7
+      value: 25.5
       objectReference: {fileID: 0}
     - target: {fileID: 8047502702995394397, guid: 65d7dede562c8d8418e7c7416d850050,
         type: 3}

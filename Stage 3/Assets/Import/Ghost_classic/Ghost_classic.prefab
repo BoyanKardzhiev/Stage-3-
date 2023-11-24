@@ -378,8 +378,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0.5
-  speedX: 0.5
-  speedZ: 0.5
+  speedX: 0.3
+  speedZ: 0.3
   transitionTime: 0.8
 --- !u!33 &795758861667686567
 MeshFilter:
