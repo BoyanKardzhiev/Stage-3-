@@ -44,8 +44,6 @@ public class GhostSpawnManager : MonoBehaviour
        //cameraPosition = transform.position;
        runningTime = runningTime + Time.deltaTime;
 
-        CheckVisibleGhost();
-
        if(time_remaining > 0)
        {
             time_remaining = time_remaining - Time.deltaTime;
@@ -96,8 +94,4 @@ public class GhostSpawnManager : MonoBehaviour
     continueProcess:;
     }
 
-    private void CheckVisibleGhost()
-    {
-        
-    }
 }
