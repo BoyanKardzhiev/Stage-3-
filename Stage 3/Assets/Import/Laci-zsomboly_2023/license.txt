@@ -1,0 +1,11 @@
+Model Information:
+* title:	Laci-zsomboly 2023
+* source:	https://sketchfab.com/3d-models/laci-zsomboly-2023-99bf908929624de7879f5ec746575cb9
+* author:	Országos Barlangnyilvántartás (https://sketchfab.com/barlangnyilvantartas)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Laci-zsomboly 2023" (https://sketchfab.com/3d-models/laci-zsomboly-2023-99bf908929624de7879f5ec746575cb9) by Országos Barlangnyilvántartás (https://sketchfab.com/barlangnyilvantartas) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
