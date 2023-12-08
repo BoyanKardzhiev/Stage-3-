@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1038671550}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CreateMap, Assembly-CSharp
         m_MethodName: ChangeObjectNumber
         m_Mode: 3
@@ -1538,7 +1538,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1038671550}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CreateMap, Assembly-CSharp
         m_MethodName: ChangeObjectNumber
         m_Mode: 3
@@ -1673,7 +1673,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1038671549}
   - component: {fileID: 1038671548}
-  - component: {fileID: 1038671550}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -1717,30 +1716,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1038671550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038671547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328c49e05622fce408465db94f9be43f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RaycastManager: {fileID: 388525033}
-  PlacebleObjects:
-  - {fileID: 5538802235814776654, guid: bec98d0b2afa2ae4b99fc6a3e9cddbae, type: 3}
-  - {fileID: 2281418642108403852, guid: 2f98a8a90ecd05041b91c3f81da39658, type: 3}
-  - {fileID: 771199664359048467, guid: 07c6272227ad27e47bb87dec235a2d60, type: 3}
-  - {fileID: 9091619305298886412, guid: 99c604801d4254f41ace915d38614a57, type: 3}
-  - {fileID: 2499611011961408069, guid: 3a17d6dc782b61a43bcd54b09efbf843, type: 3}
-  - {fileID: 7949332482308253244, guid: 80e63154762179449bcecb73c6e97527, type: 3}
-  - {fileID: 2499611011961408069, guid: 65d7dede562c8d8418e7c7416d850050, type: 3}
-  FoundObjects: []
-  building: {fileID: 0}
-  objectNumber: 0
 --- !u!1 &1213965230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,7 +1867,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1038671550}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CreateMap, Assembly-CSharp
         m_MethodName: ChangeObjectNumber
         m_Mode: 3
@@ -2159,7 +2134,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1038671550}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CreateMap, Assembly-CSharp
         m_MethodName: ChangeObjectNumber
         m_Mode: 3
@@ -2292,7 +2267,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1038671550}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CreateMap, Assembly-CSharp
         m_MethodName: ChangeObjectNumber
         m_Mode: 3
@@ -2425,7 +2400,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1038671550}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CreateMap, Assembly-CSharp
         m_MethodName: ChangeObjectNumber
         m_Mode: 3
@@ -2930,7 +2905,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1038671550}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CreateMap, Assembly-CSharp
         m_MethodName: ChangeObjectNumber
         m_Mode: 3
