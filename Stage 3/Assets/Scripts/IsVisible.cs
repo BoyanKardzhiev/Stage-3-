@@ -23,7 +23,7 @@ public class IsVisible : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (m_Renderer.isVisible)
         {
@@ -40,5 +40,5 @@ public class IsVisible : MonoBehaviour
         {
             mapCode.ChangeFoundAmount(-1);
         }
-    }
+    }*/
 }

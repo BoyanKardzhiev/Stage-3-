@@ -17,8 +17,8 @@ public class CreateMap : MonoBehaviour
     [SerializeField]
     List<GameObject> FoundObjects = new List<GameObject>();
 
-    [SerializeField]
-    GameObject building;
+    //[SerializeField]
+    //GameObject building;
 
     Camera arCam;
     GameObject spawnedObject;
@@ -29,10 +29,6 @@ public class CreateMap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 10; i++)
-        {
-            building.transform.GetChild(i).gameObject.SetActive(false);
-        }
 
         spawnedObject = null;
         arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
@@ -44,7 +40,7 @@ public class CreateMap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawnablePrefab = PlacebleObjects[objectNumber];
+        //spawnablePrefab = PlacebleObjects[objectNumber];
 
         if (Input.touchCount == 0)
             return;
@@ -58,11 +54,7 @@ public class CreateMap : MonoBehaviour
             {
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.collider.gameObject.tag == "Spawnable")
-                    {
-                        spawnedObject = hit.collider.gameObject;
-                    }
-                    else if (hit.collider.gameObject.tag == "Collectable")
+                    if (hit.collider.gameObject.tag == "Collectable")
                     {
                         //foundNumber = hit.collider.gameObject.GetComponent<FoundObject>().obj.CollectableNumber;
                         //FoundObjects[foundNumber].SetActive(true);
@@ -70,26 +62,14 @@ public class CreateMap : MonoBehaviour
                         amountFound++;
                         Destroy(hit.collider.gameObject);
                     }
-                    else
-                    {
-                        SpawnPrefab(m_Hits[0].pose.position, m_Hits[0].pose.rotation);
-                    }
                 }
-            }
-            else if (Input.GetTouch(0).phase == TouchPhase.Moved && spawnedObject != null)
-            {
-                spawnedObject.transform.position = m_Hits[0].pose.position;
-            }
-            if (Input.GetTouch(0).phase == TouchPhase.Ended)
-            {
-                spawnedObject = null;
             }
         }
 
-        for(int i=0; i<amountFound; i++)
-        {
-            building.transform.GetChild(i).gameObject.SetActive(true);
-        }
+        //for(int i=0; i<amountFound; i++)
+        //{
+        //    building.transform.GetChild(i).gameObject.SetActive(true);
+        //}
     }
 
     private void SpawnPrefab(Vector3 spawnPosition, Quaternion rotation)
@@ -104,10 +84,10 @@ public class CreateMap : MonoBehaviour
 
     public void ChangeFoundAmount(int change)
     {
-        for (int i = 0; i < amountFound; i++)
-        {
-            building.transform.GetChild(i).gameObject.SetActive(false);
-        }
+        //for (int i = 0; i < amountFound; i++)
+        //{
+       //    building.transform.GetChild(i).gameObject.SetActive(false);
+        //}
 
         amountFound = amountFound + change;
     }
